@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebTorrent video player</title>
+
+  </head>
+  <body>
+    <div>
+      <div id="progressBar"></div>
+      <video id="output" controls></video>
+    </div>
+
+    <!-- Moment is used to show a human-readable remaining time -->
+    <script type="module">
+      // Include the latest version of WebTorrent
+      import WebTorrent from 'webtorrent.chromeapp.js'
+      const client = new WebTorrent();
+      const resourceId =
+        "https://mikanani.me/Download/20250715/29b7ce90f36aa95ed99191e0f3e0c814b104b994.torrent";
+      const player = document.querySelector("video");
+
+      client.add(resourceId, (torrent) => {
+        const file = torrent.files.find((file) => file.name.endsWith(".mp4"));
+        file.streamTo(player);
+      });
+    </script>
+  </body>
+</html>
