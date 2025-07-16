@@ -1,6 +1,6 @@
 .App {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  max-width: 1800px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -90,12 +90,6 @@ button:last-child {
 
 button:last-child:hover:not(:disabled) {
   background: #d32f2f;
-}
-.video-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 video {

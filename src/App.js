@@ -177,7 +177,7 @@ function App() {
 
         {/* 视频播放器 */}
         {isPlaying && selectedTorrent && (
-          <div className="video-container">
+          <>
             {!videoReady ? (
               <div className="loading-message">
                 正在准备视频，已完成 {status.progress}%...
@@ -187,7 +187,7 @@ function App() {
                 key={selectedTorrent.id}
                 controls
                 src={`${API_BASE_URL}/stream/${selectedTorrent.id}`}
-                style={{ width: '100%', maxWidth: '1000px'}}
+                style={{ width: '100%', maxWidth: '800px' }}
                 onError={handleVideoError}
               />
             )}
@@ -198,7 +198,7 @@ function App() {
               剩余时间: {Math.floor(status.timeRemaining / 60)}分
               {status.timeRemaining % 60}秒
             </div>
-          </div>
+          </>
         )}
       </div>
     </div>
