@@ -1,70 +1,114 @@
-# Getting Started with Create React App
+# 🎬 Web Animeko Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+基于 React 的在线视频流媒体播放器前端界面，支持视频流式播放，实时显示下载进度和状态信息。
 
-## Available Scripts
+![React Version](https://img.shields.io/badge/react-18.x-blue)
+![Node Version](https://img.shields.io/badge/node-%3E%3D14-green)
 
-In the project directory, you can run:
+## ✨ 特性
 
-### `npm start`
+- 📺 流畅播放 - 支持视频流式播放
+- 📊 实时状态 - 显示下载进度、速度和连接节点
+- 🎯 简单易用 - 直观的用户界面
+- 🎨 美观设计 - 现代化的 UI 设计
+- 🔄 自动更新 - 定期刷新视频列表和状态
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🎯 演示
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+暂无
 
-### `npm test`
+## 🚀 快速开始
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 前置要求
 
-### `npm run build`
+- Node.js (>= 14.x)
+- npm 或 yarn
+- 后端服务 ![需要单独部署](https://github.com/jiang-yx6/torrent)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 安装步骤
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. 克隆仓库
+```bash
+git clone https://github.com/jiang-yx6/web-animeko.git
+cd web-animeko
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. 安装依赖
+```bash
+npm install
+# 或
+yarn install
+```
 
-### `npm run eject`
+3. 启动开发服务器
+```bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+现在，打开 [http://localhost:3000](http://localhost:3000) 即可访问应用。
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠 技术栈
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- React 18
+- HTML5 Video API
+- CSS3 动画和过渡效果
+- Fetch API
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📖 功能说明
 
-## Learn More
+### 视频选择和控制
+- 从下拉列表选择视频
+- 播放/暂停控制
+- 删除不需要的视频
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 状态显示
+- 下载进度百分比
+- 实时下载速度
+- 连接节点数量
+- 剩余下载时间
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 错误处理
+- 友好的错误提示
+- 加载状态反馈
+- 自动重试机制
 
-### Code Splitting
+## 🔗 API 接口
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+前端需要配合后端 API 使用，主要接口包括：
 
-### Analyzing the Bundle Size
+```javascript
+// 获取视频列表
+GET /api/torrent_list
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+// 开始下载视频
+GET /api/torrents/:id/start
 
-### Making a Progressive Web App
+// 获取视频状态
+GET /api/status/:id
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+// 删除视频
+DELETE /api/torrents/:id/delete
 
-### Advanced Configuration
+// 视频流
+GET /api/stream/:id
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 💻 开发说明
 
-### Deployment
+### 目录结构
+```
+src/
+  ├── App.js          # 主应用组件
+  ├── App.css         # 样式文件
+  └── index.js        # 入口文件
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 👨‍💻 作者
 
-### `npm run build` fails to minify
+- **Ethan Jiang** - [GitHub](https://github.com/jiang-yx6)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🙏 致谢
+
+- [React](https://reactjs.org/)
+- [Create React App](https://create-react-app.dev/)
+- [HTML5 Video](https://www.w3.org/TR/html5/media-elements.html)
