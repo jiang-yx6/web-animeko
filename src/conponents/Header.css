@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: #ffffffa0;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-left .logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1890ff;
+}
+
+.header-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.search-container {
+  display: flex;
+  width: 300px;
+  margin: 0 16px;
+  gap:10px;
+}
+
+.search-container .ant-input {
+  flex: 1;
+  border-radius: 4px 0 0 4px;
+  border-radius: 10px;
+}
+
+.search-container .ant-btn {
+  border-radius: 0 4px 4px 0;
+  border-radius: 10px;
+}
+
+.header-right-nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-right-nav ul li {
+  margin-left: 24px;
+}
+
+.header-right-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.header-right-nav ul li a:hover {
+  color: #1890ff;
+}
